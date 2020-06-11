@@ -13,6 +13,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var nfl_logo: UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
     
+    var allTeams: [Team] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         /// retrouve les méthodes dans le fichier UIViewExtension
@@ -30,7 +32,19 @@ class ViewController: UIViewController {
         collectionView.collectionViewLayout = layout
         
         // dans le main.storyboard on met clearColor en background pour voir la séparation des cellules
+        
+        JsonParser().parse { (teams) in
+            self.allTeams = teams
+            self.collectionView.reloadData()
+        }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "detail", let next = segue.destination as? DetailViewController {
+            next.team = sender as? Team
+        }
+    }
+    
 }
 
 extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -47,6 +61,12 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
         
         return cell
         
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let team = allTeams[indexPath.item]
+        
+        performSegue(withIdentifier: "detail", sender: team)
     }
    
     

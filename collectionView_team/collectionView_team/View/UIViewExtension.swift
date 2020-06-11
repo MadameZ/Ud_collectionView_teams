@@ -10,8 +10,7 @@ import UIKit
 
 extension UIView {
     
-    func setupGradient(_ colors: [CGColor]) {
-        
+    func setupGradient(_ colors: [CGColor]) {     
         let gradient = CAGradientLayer()
         gradient.colors = colors
         gradient.startPoint = CGPoint(x: 0, y: 1)
@@ -32,6 +31,25 @@ extension UIView {
         layer.shadowOpacity = 0.8
         layer.shadowRadius = 2
         layer.shadowOffset = CGSize(width: 2, height: 2)
+    }
+    
+}
+
+extension UIImageView {
+    
+    func loadFrom(_ urlString: String) {
+        guard let url = URL(string: urlString) else { return }
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            /// On ne met pas de if let exprès pour voir une autre façon de faire
+            if error != nil {
+                print(error!.localizedDescription)
+            }
+            if data != nil {
+                DispatchQueue.main.async {
+                    self.image = UIImage(data: data!)
+                }
+            }
+        }.resume()
     }
     
 }

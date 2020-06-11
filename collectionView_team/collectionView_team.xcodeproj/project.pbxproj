@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD0FDD102492353F001D6D48 /* nfl.json in Resources */ = {isa = PBXBuildFile; fileRef = BD0FDD0F2492353F001D6D48 /* nfl.json */; };
+		BD0FDD122492355E001D6D48 /* JsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0FDD112492355E001D6D48 /* JsonParser.swift */; };
+		BDAE579824923C7F00E85253 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAE579724923C7F00E85253 /* DetailViewController.swift */; };
 		BDC0C57D24894ECF0034DC36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC0C57C24894ECF0034DC36 /* AppDelegate.swift */; };
 		BDC0C57F24894ECF0034DC36 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC0C57E24894ECF0034DC36 /* SceneDelegate.swift */; };
 		BDC0C58124894ECF0034DC36 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC0C58024894ECF0034DC36 /* ViewController.swift */; };
@@ -20,6 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD0FDD0F2492353F001D6D48 /* nfl.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = nfl.json; sourceTree = "<group>"; };
+		BD0FDD112492355E001D6D48 /* JsonParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonParser.swift; sourceTree = "<group>"; };
+		BDAE579724923C7F00E85253 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		BDC0C57924894ECF0034DC36 /* collectionView_team.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = collectionView_team.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDC0C57C24894ECF0034DC36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDC0C57E24894ECF0034DC36 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				BDC0C59424894F7E0034DC36 /* Team.swift */,
+				BD0FDD112492355E001D6D48 /* JsonParser.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -94,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				BDC0C58024894ECF0034DC36 /* ViewController.swift */,
+				BDAE579724923C7F00E85253 /* DetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -101,6 +109,7 @@
 		BDC0C59324894EF00034DC36 /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
+				BD0FDD0F2492353F001D6D48 /* nfl.json */,
 				BDC0C57C24894ECF0034DC36 /* AppDelegate.swift */,
 				BDC0C57E24894ECF0034DC36 /* SceneDelegate.swift */,
 				BDC0C58524894ED60034DC36 /* Assets.xcassets */,
@@ -169,6 +178,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD0FDD102492353F001D6D48 /* nfl.json in Resources */,
 				BDC0C58924894ED60034DC36 /* LaunchScreen.storyboard in Resources */,
 				BDC0C58624894ED60034DC36 /* Assets.xcassets in Resources */,
 				BDC0C58424894ECF0034DC36 /* Main.storyboard in Resources */,
@@ -182,8 +192,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDAE579824923C7F00E85253 /* DetailViewController.swift in Sources */,
 				BDC0C597248952D80034DC36 /* UIViewExtension.swift in Sources */,
 				BDC0C59524894F7E0034DC36 /* Team.swift in Sources */,
+				BD0FDD122492355E001D6D48 /* JsonParser.swift in Sources */,
 				BDC0C58124894ECF0034DC36 /* ViewController.swift in Sources */,
 				BDC0C59B248A495D0034DC36 /* TeamCell.swift in Sources */,
 				BDC0C57D24894ECF0034DC36 /* AppDelegate.swift in Sources */,

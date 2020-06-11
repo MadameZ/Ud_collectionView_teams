@@ -8,10 +8,33 @@
 
 import Foundation
 
-struct Team {
+//struct Team {
+//
+//    var code: String
+//    var name: String
+//    var city: String
+//
+//}
+
+/// on retranscrit les données du fichier Json en struct :
+
+struct Team: Decodable {
+    var team: Identity
+    var stadium: Stadium
+    var conference: String
+    var titles: [Int]
     
-    var code: String
+}
+
+struct Identity: Decodable {
     var name: String
-    var city: String
+    var location: String
+    var logo: String
     
+}
+
+struct Stadium: Decodable {
+    var name: String
+    var capacity: Int
+    var image: String
 }
